@@ -24,7 +24,9 @@ Morgen ga ik 2 workshops volgen: scroll driven animations en view transisitions.
 Ik wil morgen graag mijn illustratie af hebben (niet te moeilijk), zodat ik kan starten met coderen en hiermee kan experimenteren.
 
 
+
 woensdag 04 feb
+
 Wat heb ik vandaag gedaan?
 Ik heb 2 workshops gevolgd: scroll-driven animations en view-transitions. 
 Scroll-driven animations vond ik super interessant en heel goed te volgen. Animaties leren is één van mijn leerdoelen, dus dit past daar helemaal bij. Het viel me mee dat je veel animaties in CSS kan maken met keyframes.
