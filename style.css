@@ -1,0 +1,36 @@
+*, *::after, *::before {
+    box-sizing:border-box;  
+}
+
+/* !! BRON: https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+/* ---------- COLORS ----------*/
+:root {
+    --color-text-one:#fe5035;
+    --color-text-two: #020202;
+    --color-text-three: #ffffff;
+    --color-background-one: #efe7d6;
+    --color-background-two: #fe5035;
+}
+
+/* ---------- TYPOGRAFIE ---------- */
+@font-face {
+    font-family: 'Sigmar One';
+    src: url(../fonts/SigmarOne-Regular.ttf);
+}
+
+body {
+    background-color: var(--color-background-one);
+}
+
+h2 {
+    font-family: 'Sigmar One';
+    text-transform: uppercase;
+}
