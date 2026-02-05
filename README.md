@@ -1,6 +1,6 @@
 # MilaMassaro_MinorWDD
 WEEK 1 
-dinsdag 03 feb
+**dinsdag 03 feb**
 
 Wat heb ik vandaag gedaan?
 Kick-off van de minor met uitleg over de planning en de eerste opdracht. 
@@ -25,7 +25,7 @@ Ik wil morgen graag mijn illustratie af hebben (niet te moeilijk), zodat ik kan 
 
 
 
-woensdag 04 feb
+**woensdag 04 feb**
 
 Wat heb ik vandaag gedaan?
 Ik heb 2 workshops gevolgd: scroll-driven animations en view-transitions. 
@@ -47,3 +47,32 @@ Ook merk ik dat ik veel twijfel van is dit wel goede nette code of niet, waardoo
 Wat ga ik morgen doen?
 Ik ga morgen de verschillende lagen in Illustrator benoemen en dan experimenteren met animaties in HTML en CSS met deze lagen.
 Ik hoop dat ik verschillende animaties af kan hebben.
+
+
+
+**donderdag 05 feb**
+
+Wat heb ik vandaag gedaan?
+Ik heb mijn Adobe Illustrator bestand ingedeeld zodat alle onderdelen van de illustratie een juiste naam hebben en in de juiste volgorde zitten.
+Ik heb de workshop HTML Rulez gevolgd.
+Ik heb dit geëxporteerd als SVG en deze SVG vervolgens geoptimaliseerd met SVGO (online tool).
+Ik heb mijn SVG goed in mijn HTML gezet, waarbij de style in CSS wordt gedaan. Alles de juiste classes gegeven.
+In CSS heb ik alle juiste kleuren aan de onderdelen gegeven.
+Toen ben ik gestart met het animeren van de verschillende paden, maar het probleem was dat hij het startpoint van de gehele SVG gebruikt en daar vanuit ging draaien.
+Sanne wist ook even niet hoe het opgelost kon worden en heeft me een artikel laten zien. Deze heb ik gelezen en aantekeningen van gemaakt, maar hier stond de oplossing helaas niet in. Dus ik ga het even aan Cyd vragen op advies van Sanne.
+
+Hoeveel tijd heeft dit me gekost?
+5 uur totaal.
+30-45 min Illustrator file opschonen.
+45-60 min workshop.
+45 min informatie over SVG opzoeken: wat is de correcte manier?
+2 uur en 15 min animeren van SVG (en lezen van artikel).
+
+Wat heb ik geleerd?
+Als je een SVG exporteerd uit Adobe Illustrator, dat er veel onnodige code in staat en dat je dit kunt optimaliseren.
+Dat paden van SVG standaard draaien vanuit het startpunt van de gehele SVG.
+HTML is moeilijk.
+
+Wat ga ik morgen doen?
+Ik ga zorgen dat er 2 of 3 animaties van mijn SVG het doen voor de presentatie.
+Eerste versie presenteren.
