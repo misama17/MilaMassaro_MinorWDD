@@ -13,15 +13,18 @@ Ik heb schetsen gemaakt voor mijn eerste website.
 Na het maken van eerste schetsen heb ik eentje gekozen die me het meeste aansprak en ik ben begonnen met illustreren. Ik illustreer mezelf in een bepaalde visuele stijl.
 Het idee is dat ik de illustratie vanuit Adobe Illustrator exporteer als SVG en dan kan ik de verschillende elementen binnen de SVG aanspreken om te coderen (en laten bewegen bijvoorbeeld).
 
+
 Hoeveel tijd heeft me dat gekost?
 
 Ongeveer 2 uur.
+
 
 Wat heb ik geleerd?
 
 Ik heb geleerd dat ik eigenlijk helemaal geen goed beeld heb van wat mogelijk is met CSS en Javascript. Ook heb ik geen idee hoe moeilijk bepaalde dingen zijn om te maken... Hierdoor vond ik het lastig om te starten met een idee.
 Ik merk dat ik heel erg gericht ben op vormgeving. Dit komt natuurlijk ook doordat ik de afgelopen 1,5 jaar alleen maar vormgeving dingen heb gedaan. Dus ik was heel erg aan het schetsen en mooie dingen aan het maken, maar eigenlijk wist ik helemaal niet of dat wel zin had en of ik hier iets mee kon.
 Na het vragen aan de docent kwam ik erachter dat ik met SVG kan werken en deze kan animeren, dus dat lijkt me heel interessant.
+
 
 Wat ga ik morgen doen?
 
@@ -41,16 +44,19 @@ Ik heb de illustratie in Adobe Illustrator afgemaakt, zodat ik hem kan exportere
 Ik heb de basis voor mijn website gemaakt: fonts, kleuren, structuur etc.
 Github geupdate. Dit ging een aantal keer fout dus duurde langer dan gehoopt.
 
+
 Hoeveel tijd heeft dit me gekost?
 
 5 uur
 Workshops duurden in totaal iets meer dan 2 uur, illustratie afmaken duurde 1 uur en de rest in totaal 2 uur.
+
 
 Wat heb ik geleerd?
 
 Dat ik code goed begrijp aan de hand van voorbeelden, dan kan ik het ook uitleggen. 
 Maar ik vind het soms lastig als ik zelf uit het "niets" moet bedenken wat ik moet doen.
 Ook merk ik dat ik veel twijfel van is dit wel goede nette code of niet, waardoor ik een beetje vast lijk te lopen.
+
 
 Wat ga ik morgen doen?
 
@@ -71,6 +77,7 @@ In CSS heb ik alle juiste kleuren aan de onderdelen gegeven.
 Toen ben ik gestart met het animeren van de verschillende paden, maar het probleem was dat hij het startpoint van de gehele SVG gebruikt en daar vanuit ging draaien.
 Sanne wist ook even niet hoe het opgelost kon worden en heeft me een artikel laten zien. Deze heb ik gelezen en aantekeningen van gemaakt, maar hier stond de oplossing helaas niet in. Dus ik ga het even aan Cyd vragen op advies van Sanne.
 
+
 Hoeveel tijd heeft dit me gekost?
 
 5 uur totaal.
@@ -79,11 +86,13 @@ Hoeveel tijd heeft dit me gekost?
 45 min informatie over SVG opzoeken: wat is de correcte manier?
 2 uur en 15 min animeren van SVG (en lezen van artikel).
 
+
 Wat heb ik geleerd?
 
 Als je een SVG exporteerd uit Adobe Illustrator, dat er veel onnodige code in staat en dat je dit kunt optimaliseren.
 Dat paden van SVG standaard draaien vanuit het startpunt van de gehele SVG.
 HTML is moeilijk.
+
 
 Wat ga ik morgen doen?
 
