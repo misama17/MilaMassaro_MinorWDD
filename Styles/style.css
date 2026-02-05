@@ -18,6 +18,15 @@
     --color-text-three: #ffffff;
     --color-background-one: #efe7d6;
     --color-background-two: #fe5035;
+    --huidskleur: #fdb998;
+    --haarkleur: #633d23;
+    --oogbolkleur: #fff;
+    --pupilkleur: #472003;
+    --wimperkleur: #281b0d;
+    --wenkbrauwkleur: #442f23;
+    --kledinggrijskleur: #1e1e1e;
+    --kledingdonkergrijskleur: #020202;
+    --kettingkleur: #fcd638;
 }
 
 /* ---------- TYPOGRAFIE ---------- */
@@ -26,15 +35,92 @@
     src: url(../fonts/SigmarOne-Regular.ttf);
 }
 
+
+
+/* ---------- ALGMEEN ---------- */
 body {
     background-color: var(--color-background-one);
 }
+
+
+
 
 h2 {
     font-family: 'Sigmar One';
     text-transform: uppercase;
 }
 
-p {
-    color: #020202;
+
+/* STYLING SVG MILA MASSARO */
+/* <---- HAAR ----> */
+.haar_achterkant,
+.haar_rechts,
+.haar_links,
+.haar_plukje {
+    fill: var(--haarkleur);
+}
+
+/* <---- LICHAAM ----> */
+.nek,
+.hoofd,
+.hand_rechts,
+.hand_links {
+    fill:var(--huidskleur);
+}
+
+.oog {
+    fill:var(--oogbolkleur);
+}
+
+.pupil_rechts,
+.pupil_links {
+    fill: var(--pupilkleur);
+}
+
+.wimpers {
+    fill: var(--wimperkleur);
+}
+
+.wenkbrauwen {
+    fill: var(--wenkbrauwkleur);
+}
+
+.onderlichaam,
+.arm_rechts,
+.arm_links {
+    fill: var(--kledinggrijskleur);
+}
+
+/* <---- KLEDING EN DETAILS ----> */
+.zak,
+.lichaam {
+    fill: var(--kledingdonkergrijskleur);
+}
+
+.ketting,
+.hangertje_draak {
+    fill: var(--kettingkleur);
+}
+
+svg:nth-of-type(1) {
+    width: 90vw;
+    height: auto;
+}
+
+.illustratie_mila {
+    .hangertje_draak {
+        animation-timeline: view(); 
+        animation-name: rotate-animation;
+        animation-timing-function: ease-in;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes rotate-animation {
+    from {
+        transform: rotateX(0);
+    }
+    to {
+		transform: rotateX(10deg);
+	}
 }
