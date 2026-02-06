@@ -17,6 +17,8 @@ html, body {
     white-space: nowrap;
 }
 
+
+
 /* ---------- COLORS ----------*/
 :root {
     --color-text-one:#fe5035;
@@ -35,6 +37,8 @@ html, body {
     --kettingkleur: #fcd638;
 }
 
+
+
 /* ---------- TYPOGRAFIE ---------- */
 @font-face {
     font-family: 'Sigmar One';
@@ -43,10 +47,15 @@ html, body {
 
 
 
+
+
 /* ---------- ALGMEEN ---------- */
 body {
     background-color: var(--color-background-one);
 }
+
+
+
 
 
 section:nth-of-type(1),
@@ -64,17 +73,7 @@ section:nth-of-type(1) div {
     top: 0;
 
     white-space: nowrap;
-    width:320vw;
-
-    /* animation-timeline: view(); 
-    animation-range: cover; */
-    /* animation-name: translate-animation-text; */
-    /* animation-timeline: --letter-container; */
-    /* animation-fill-mode: both;  
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; */
-
+    width: 320vw;
 
     animation-timeline: --letter-container;
     animation-name: translate-animation-text;
@@ -85,8 +84,6 @@ section:nth-of-type(1) div {
 section:nth-of-type(1) div svg {
     fill: var(--color-text-one);
     width: 80vw;
-
-    /* flex-shrink:0; */
 }
 
 @keyframes translate-animation-text {
@@ -152,11 +149,15 @@ section:nth-of-type(1) div svg {
 
 
 
-
+section:nth-of-type(2) {
+    position: relative;
+}
 
 section:nth-of-type(2) svg {
     width: 90vw;
     height: auto;
+    position: absolute;
+    z-index: 1;
 }
 
 .oog {
@@ -211,5 +212,37 @@ section:nth-of-type(2) svg {
     }
     100% {
         transform: translate(0, 1.8%);
+    }
+}
+
+
+section:nth-of-type(2) > div {
+    background-color: var(--color-background-two);
+    height: 70vh;
+    width: 90vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    animation-timeline: view(); 
+    animation-name: scale-in-top-rectangle;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.25,.46,.45,.94);
+    animation-delay: 5s;
+
+    /* animation: scale-in-top-rectangle 10s cubic-bezier(.25,.46,.45,.94) both; */
+}
+
+
+@keyframes scale-in-top-rectangle {
+    0% {
+        transform: scaleY(0);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1);
+        transform-origin: 100% 0%;
+        opacity: 1;
     }
 }
