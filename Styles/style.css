@@ -1,5 +1,11 @@
 *, *::after, *::before {
-    box-sizing:border-box;  
+    box-sizing:border-box; 
+    margin: 0;
+	font-family: sans-serif; 
+}
+
+html, body {
+    overflow-x: clip;
 }
 
 /* !! BRON: https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -43,11 +49,53 @@ body {
 }
 
 
+section:nth-of-type(1),
+section:nth-of-type(2) {
+    height: 100vh;
+}
+
+section:nth-of-type(1) {
+    height: 100vh;
+    view-timeline-name: --letter-container;
+}
+
+section:nth-of-type(1) div {
+    position: sticky;
+    top: 0;
+
+    white-space: nowrap;
+    width:320vw;
+
+    /* animation-timeline: view(); 
+    animation-range: cover; */
+    /* animation-name: translate-animation-text; */
+    /* animation-timeline: --letter-container; */
+    /* animation-fill-mode: both;  
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
 
 
-h2 {
-    font-family: 'Sigmar One';
-    text-transform: uppercase;
+    animation-timeline: --letter-container;
+    animation-name: translate-animation-text;
+    animation-fill-mode: both;
+    animation-range: exit;
+}
+
+section:nth-of-type(1) div svg {
+    fill: var(--color-text-one);
+    width: 80vw;
+
+    /* flex-shrink:0; */
+}
+
+@keyframes translate-animation-text {
+    0% {
+        translate: 0;
+    }
+    100% {
+        translate: calc(-100% + 100vw)
+    }
 }
 
 
@@ -68,7 +116,7 @@ h2 {
     fill:var(--huidskleur);
 }
 
-.oog {
+.oogbol {
     fill:var(--oogbolkleur);
 }
 
@@ -102,25 +150,66 @@ h2 {
     fill: var(--kettingkleur);
 }
 
-svg:nth-of-type(1) {
+
+
+
+
+section:nth-of-type(2) svg {
     width: 90vw;
     height: auto;
 }
 
-.illustratie_mila {
-    .hangertje_draak {
-        animation-timeline: view(); 
-        animation-name: rotate-animation;
-        animation-timing-function: ease-in;
-        animation-fill-mode: both;
-    }
+.oog {
+    transform-box: fill-box;
 }
 
-@keyframes rotate-animation {
-    from {
-        transform: rotateX(0);
+.oog > .pupil_links,
+.oog > .pupil_rechts {
+    animation-timeline: view(); 
+    animation-timing-function: cover exit;
+    animation-name: translate-animation-oog;
+    animation-fill-mode: both;
+}
+
+.hangertje_draak {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  
+  animation-timeline: view(); 
+  animation-timing-function: cover;
+  animation-name: rotate-animation-ketting;
+  animation-fill-mode: both;
+}
+
+
+
+/* <---- ANIMATIE ----> */
+@keyframes rotate-animation-ketting {
+  0% {
+    transform: rotate(20deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+}
+}
+
+@keyframes translate-animation-oog {
+    0% {
+        transform: translate(0, -2%); 
     }
-    to {
-		transform: rotateX(10deg);
-	}
+    50% {
+        transform: translate(0, -1%); 
+    }
+    100% {
+        transform: translate(0, 1.8%);
+    }
 }
