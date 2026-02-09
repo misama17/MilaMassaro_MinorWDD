@@ -98,3 +98,37 @@ Wat ga ik morgen doen?
 
 Ik ga zorgen dat er 2 of 3 animaties van mijn SVG het doen voor de presentatie.
 Eerste versie presenteren.
+
+
+WEEK 2
+
+**maandag 09 feb**
+
+Wat heb ik vandaag gedaan?
+
+Ik heb de workshop van Sanne gevolgd (Data uit API halen), vooral voor het filteren en sorteren. 
+Ik heb nieuwe schetsen gemaakt voor de nieuwe eis. Uiteindelijk gekozen om een italian charm bracelet te maken.
+Ik heb op CodePen een 3D carousel gemaakt. Deze werkt helemaal.
+Ik heb het vlak op de achtergrond gemaakt en geanimeerd.
+
+
+Hoeveel tijd heeft dit me gekost?
+
+6 uur totaal.
+30 min intro.
+45 - 60 min workshop.
+4 uur verder werken.
+
+
+Wat heb ik geleerd?
+
+Hoe ik 3D carousel kan maken en uberhaupt met diepte kan werken.
+Hoe ik kan filteren en sorteren uit API.
+
+Wat ga ik morgen doen?
+
+Morgen ga ik alles uit API halen voor op website, workshop over typografie volgen.
+2 modes instellen.
+
+
+
