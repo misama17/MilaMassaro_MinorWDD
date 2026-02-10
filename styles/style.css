@@ -250,3 +250,164 @@ section:nth-of-type(2) section div {
         opacity: 1;
     }
 }
+
+
+
+
+
+section:nth-of-type(3) {
+	margin:0;
+  row-gap: 0;
+	
+  /* dynamic view height: houdt rekening met de balkjes op een iPhone   */
+	height:100dvh;
+	
+	display:grid;
+	place-items:center;
+  
+  grid-template-rows: repeat(4, minmax(2em, 4em)) auto;
+  
+  grid-template-areas:
+    "svg thema"
+    "svg definitie"
+    "svg medestudenten"
+    "svg API"
+    "animatie animatie"
+    "button1 button2";
+}
+
+section:nth-of-type(3) ul {
+	--duration:90s;
+	--size:min(30vw, 12em);
+  
+  --extra:0;
+  
+  padding: 0;
+  margin: 0;
+  list-style-type: '';
+	
+	display:grid;
+  grid-area: animatie;
+	
+	perspective:50em;
+  
+  /* Zorgt ervoor dat de kaartjes/divs niet ineens ervoor komen te draaien. */
+	transform-style:preserve-3d;
+  
+/*   transform: rotate(-30deg); */
+}
+
+
+li {
+  /*  Je plaatst alles in dezelfde grid, dus op elkaar.  */
+	grid-area:1/1;
+	/*  Zowel op parent als op child grid (ul en li). Zo komt het achter elkaar te draaien.  */
+	display:grid;
+	
+  transform:
+			rotateY( 
+        calc(
+          1turn / sibling-count() * sibling-index()  
+          +
+          1turn / sibling-count() * var(--extra, 0)
+        ) 
+      )
+			translateZ( calc(var(--size) * 1.7) );
+  transition:.5s;
+/* 	animation: circle-animation var(--duration) linear infinite; */
+	
+  /*  sibling-count() bepaalt het aantal li's. Door geen getal tussen de haakjes te zetten past hij zichzelf aan aan de HTML. sibling-index() bepaalt de huidige element.  */
+/* 	animation-delay:calc( var(--duration) / sibling-count() * sibling-index() * -1 ); */
+	
+	transform-style:preserve-3d;
+}
+
+/* section:nth-of-type(1) li.selected {
+  transform: scale(1.2);
+} */
+
+div {
+	grid-area:1/1;
+	
+	width:var(--size);
+	aspect-ratio:2/1;
+	
+/* 	background-image:linear-gradient(45deg, silver, whitesmoke); */
+  background-color: gainsboro;
+	border-radius: 10px;
+  
+  /*  Hier zorg je ervoor dat aan de voorkant de voorkant te zien is en aan de achterkant de achterkant.  */
+	backface-visibility:hidden;
+ 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+	
+	&:nth-of-type(2) {
+		rotate:y .5turn;
+    background-color: dimgray;
+	}
+  
+/*   &:hover {
+    transform: scale(1.2);
+  } */
+}
+
+section:nth-of-type(3) h2 {
+  grid-area: thema;
+}
+
+section:nth-of-type(3) h3 {
+  grid-area: medestudenten;
+}
+
+section:nth-of-type(3) p:nth-of-type(1) {
+  grid-area: definitie;
+}
+
+section:nth-of-type(3) p:nth-of-type(2) {
+  grid-area: API;
+}
+
+section:nth-of-type(3) button {
+  appearance: none;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  
+  transition: 1s ease;
+  
+  &:nth-of-type(1) {
+    grid-area: button1;
+  }
+  
+  &:nth-of-type(2) {
+    grid-area: button2;
+  }
+  
+  & > svg {
+    height: 4em;
+  }
+  
+  & path {
+    fill: var(--color-text-one);
+  }
+  
+  & circle {
+    fill: var(--color-text-three);
+    stroke: var(--color-text-one);
+  }
+  
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.letter_m {
+  grid-area: svg;
+  align-items: center;
+  justify-self: center;
+  
+  fill: white;
+  height: 100%;
+  width: auto;
+}
