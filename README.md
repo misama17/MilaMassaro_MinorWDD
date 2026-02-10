@@ -132,3 +132,33 @@ Morgen ga ik alles uit API halen voor op website, workshop over typografie volge
 
 
 
+**maandag 10 feb**
+
+Wat heb ik vandaag gedaan?
+
+Workshop typografie.
+Grid gemaakt voor de info die hoort bij de geselecteerde charm.
+De 3D carousel werkend gemaakt met buttons.
+Ik heb geprobeerd om de schakels ook toe te voegen, maar dit duurde me wat te lang om werkend te maken met :nth-child(even) en :nth-child(odd). Dus het leek me handiger om aan API te werken, want dit is echt alleen een vormgevings dingetje.
+API proberen in te laden, maar nog niet helemaal gelukt.
+
+
+Hoeveel tijd heeft dit me gekost?
+
+Totaal 6 uur
+45-60 min workshop
+1 uur grid maken
+2 uur carousel met knoppen
+1 uur API erin
+
+
+Wat heb ik geleerd?
+
+Wat CSS custom properties (variables) zijn en hoe ze werken.
+Wat parseInt is.
+Hoe je in CSS kan aanroepen met &, zodat het netter en compacter is.
+
+
+Wat ga ik morgen doen?
+
+Ik hoop morgen alles samen te kunnen voegen en de API helemaal werkend te maken. 
