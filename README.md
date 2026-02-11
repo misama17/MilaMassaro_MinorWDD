@@ -132,7 +132,7 @@ Morgen ga ik alles uit API halen voor op website, workshop over typografie volge
 
 
 
-**maandag 10 feb**
+**dinsdag 10 feb**
 
 Wat heb ik vandaag gedaan?
 
@@ -162,3 +162,37 @@ Hoe je in CSS kan aanroepen met &, zodat het netter en compacter is.
 Wat ga ik morgen doen?
 
 Ik hoop morgen alles samen te kunnen voegen en de API helemaal werkend te maken. 
+
+
+
+**woensdag 12 feb**
+
+Wat heb ik vandaag gedaan?
+
+API ingevoegd met JavaScript. 
+Gezorgd met arrays dat de tekst met info synchroon loopt met de carousel.
+Hele vormgeving met grid aangepast. 
+light dark mode toegevoegd
+Ik ga nog in de @media zetten dat mijn naam in het begin klein moet zijn bij groot scherm
+
+Hoeveel tijd heeft dit me gekost?
+
+Totaal 6 uur
+45 min grids en vormgeving
+3,5 uur API en arrays
+30 min light dark mode
+
+
+
+Wat heb ik geleerd?
+
+Dat ik deze minor nog even niet zo heel leuk vind :(. 
+Ik vind het heel lastig om de hele dag achter mijn laptop te zitten en ook in dit lokaal, ik werk hier niet heel prettig.
+
+Ik heb mijn geheugen opgefrist over arrays in JavaScript en eigenlijk sowieso JavaScript weer.
+
+Wat ga ik morgen doen?
+
+Presentatie en marktje en reflectieformulier.
+Slapen in de avond ;)
+
