@@ -3,9 +3,9 @@
 // ************************************
 
 // ---------- 3D CAROUSEL ----------
-const previousButton = document.querySelector('section:nth-of-type(3) button:nth-of-type(1)');
-const nextButton = document.querySelector('section:nth-of-type(3) button:nth-of-type(2)');
-const carouselContainer = document.querySelector("section:nth-of-type(3) ul");
+const previousButton = document.querySelector('section:nth-of-type(2) button:nth-of-type(1)');
+const nextButton = document.querySelector('section:nth-of-type(2) button:nth-of-type(2)');
+const carouselContainer = document.querySelector("section:nth-of-type(2) ul");
 
 nextButton.addEventListener("click", toNext);
 previousButton.addEventListener("click", toPrev);

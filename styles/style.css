@@ -27,20 +27,22 @@ html, body {
     --color-background-one: #efe7d6;
     --color-background-two: #fe5035;
     --color-background-three: #1e1e1e;
-    --huidskleur: #fdb998;
-    --haarkleur: #633d23;
-    --oogbolkleur: #fff;
-    --pupilkleur: #472003;
-    --wimperkleur: #281b0d;
-    --wenkbrauwkleur: #442f23;
-    --kledinggrijskleur: #1e1e1e;
-    --kledingdonkergrijskleur: #020202;
-    --kettingkleur: #fcd638;
+    --color-skin: #fdb998;
+    --color-hair: #633d23;
+    --color-eyeball: #fff;
+    --color-pupil: #472003;
+    --color-lash: #281b0d;
+    --color-eyebrow: #442f23;
+    --color-grey-clothes: #1e1e1e;
+    --color-darkgrey-clothes: #020202;
+    --color-jewellery-front: #fcd638;
+    --color-jewellery-back: #ba9600;
 }
 
 
-
-/* ---------- TYPOGRAFIE ---------- */
+/* ---------------- */
+/* MARK: Typografie */
+/* ---------------- */
 @font-face {
     font-family: 'Sigmar One';
     src: url(../fonts/SigmarOne-Regular.ttf);
@@ -48,23 +50,23 @@ html, body {
 
 
 
-
-
-/* ---------- ALGMEEN ---------- */
+/* -------------- */
+/* MARK: Algemeen */
+/* -------------- */
 body {
     background-color: var(--color-background-one);
 }
 
 
-
-
-/* <---- NAAM ----> */
+/* ---------- */
+/* MARK: Naam */
+/* -----------*/
 section:nth-of-type(1) {
     height: 100vh;
     view-timeline-name: --letter-container;
 }
 
-section:nth-of-type(1) div {
+main > section:nth-of-type(1) div {
     position: sticky;
     top: 0;
 
@@ -77,58 +79,45 @@ section:nth-of-type(1) div {
     animation-range: exit;
 }
 
-section:nth-of-type(1) div svg {
+main > section:nth-of-type(1) div svg {
     fill: var(--color-text-one);
     width: 80vw;
 }
 
 
-/* <---- MILA ----> */
-section:nth-of-type(2) {
+
+/* --------------- */
+/* MARK: Mila info */
+/* --------------- */
+main > section:nth-of-type(2) {
     height: 100vh;
-    /* background-color: red; */
 }
 
-section:nth-of-type(2) svg {
-    width: 75%;
+section:nth-of-type(2) > svg {
+    width: 60%;
     max-width: 25em;
     height: auto;
-    position: absolute;
-    z-index: 1;
-    /* left: 5%; */
-    margin: 2.5em;
 }
 
-section:nth-of-type(2) section {
-    background-color: rgba(255, 100, 255, 0.2);
-    position: relative;
-}
-
-section:nth-of-type(2) section div {
+/* .rectangle {
     background-color: var(--color-background-two);
     height: 50%;
     position: absolute;
-    inset: 10%;
-    /* box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); */
+    inset: 10%; */
 
     /* https://animista.net/play/entrances/scale-in/scale-in-ver-top */
-    /* animation-timeline: view(); 
-    animation-name: scale-in-top-rectangle;
-    animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(.25,.46,.45,.94);
-    animation-delay: 5s; */
+    /* animation: scale-in-top-rectangle 10s cubic-bezier(.25,.46,.45,.94) both;
+} */
 
-    animation: scale-in-top-rectangle 10s cubic-bezier(.25,.46,.45,.94) both;
-}
-
-
-/* STYLING SVG MILA MASSARO */
+/* -------------------------- */
+/* MARK: Styling Mila Massaro */
+/* -------------------------- */
 /* <---- HAAR ----> */
 .haar_achterkant,
 .haar_rechts,
 .haar_links,
 .haar_plukje {
-    fill: var(--haarkleur);
+    fill: var(--color-hair);
 }
 
 /* <---- LICHAAM ----> */
@@ -136,41 +125,41 @@ section:nth-of-type(2) section div {
 .hoofd,
 .hand_rechts,
 .hand_links {
-    fill:var(--huidskleur);
+    fill:var(--color-skin);
 }
 
 .oogbol {
-    fill:var(--oogbolkleur);
+    fill:var(--color-eyeball);
 }
 
 .pupil_rechts,
 .pupil_links {
-    fill: var(--pupilkleur);
+    fill: var(--color-pupil);
 }
 
 .wimpers {
-    fill: var(--wimperkleur);
+    fill: var(--color-lash);
 }
 
 .wenkbrauwen {
-    fill: var(--wenkbrauwkleur);
+    fill: var(--color-eyebrow);
 }
 
 .onderlichaam,
 .arm_rechts,
 .arm_links {
-    fill: var(--kledinggrijskleur);
+    fill: var(--color-grey-clothes);
 }
 
 /* <---- KLEDING EN DETAILS ----> */
 .zak,
 .lichaam {
-    fill: var(--kledingdonkergrijskleur);
+    fill: var(--color-darkgrey-clothes);
 }
 
 .ketting,
 .hangertje_draak {
-    fill: var(--kettingkleur);
+    fill: var(--color-jewellery-front);
 }
 
 .oog {
@@ -197,8 +186,9 @@ section:nth-of-type(2) section div {
 
 
 
-
-/* <---- ANIMATIE ----> */
+/* --------------- */
+/* MARK: Animaties */
+/* --------------- */
 @keyframes translate-animation-text {
     0% {
         translate: 0;
@@ -209,21 +199,21 @@ section:nth-of-type(2) section div {
 }
 
 @keyframes rotate-animation-ketting {
-  0% {
-    transform: rotate(20deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-}
+    0% {
+        transform: rotate(20deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 @keyframes translate-animation-oog {
@@ -238,7 +228,7 @@ section:nth-of-type(2) section div {
     }
 }
 
-@keyframes scale-in-top-rectangle {
+/* @keyframes scale-in-top-rectangle {
     0% {
         transform: scaleY(0);
         transform-origin: 100% 0%;
@@ -249,165 +239,181 @@ section:nth-of-type(2) section div {
         transform-origin: 100% 0%;
         opacity: 1;
     }
+} */
+
+
+
+/* ------------------------ */
+/* MARK: Informatie section */
+/* ------------------------ */
+main > section:nth-of-type(2) {
+    display: grid;
+    grid-template-areas:
+    "svg           svg"
+    "thema         thema"
+    "definitie     definitie"
+    "medestudenten medestudenten"
+    "API           API"
+    "animatie      animatie"
+    "button1       button2";
+    row-gap: 2em;
+    grid-auto-rows: max-content;
+
+    margin: 1em 0 4em 0;
+
+    & ul {
+        grid-area: animatie;
+        margin: 3em 0 1em 0;
+    }
+
+    & h2 {
+        grid-area: thema;
+    }
+
+    & h3 {
+        grid-area: medestudenten;
+    }
+
+    & p:nth-of-type(1) {
+        grid-area: definitie;
+    }
+
+    & p:nth-of-type(2) {
+        grid-area: API;
+    }
+
+    & > svg {
+        grid-area: svg;
+        margin: 2em 0;
+    }
+
+    & button:nth-of-type(1) {
+        grid-area: button1;
+        justify-self: end;
+    }
+
+    & button:nth-of-type(2) {
+        grid-area: button2;
+        justify-self: start;
+    }
 }
 
 
-
-
-
-section:nth-of-type(3) {
-	margin:0;
-  row-gap: 0;
+section:nth-of-type(2) {
+	margin: 10em 0 0 0;
+    row-gap: 0;
 	
-  /* dynamic view height: houdt rekening met de balkjes op een iPhone   */
-	height:100dvh;
+    /* dynamic view height: houdt rekening met de balkjes op een iPhone   */
+    height:100dvh;
 	
 	display:grid;
 	place-items:center;
-  
-  grid-template-rows: repeat(4, minmax(2em, 4em)) auto;
-  
-  grid-template-areas:
-    "svg thema"
-    "svg definitie"
-    "svg medestudenten"
-    "svg API"
-    "animatie animatie"
-    "button1 button2";
 }
 
-section:nth-of-type(3) ul {
+section:nth-of-type(2) ul {
 	--duration:90s;
-	--size:min(30vw, 12em);
+	--size:min(40vw, 12em);
+    --extra:0;
   
-  --extra:0;
-  
-  padding: 0;
-  margin: 0;
-  list-style-type: '';
+    padding: 0;
+    margin: 0;
+    list-style-type: '';
 	
-	display:grid;
-  grid-area: animatie;
+	display: grid;
 	
 	perspective:50em;
   
-  /* Zorgt ervoor dat de kaartjes/divs niet ineens ervoor komen te draaien. */
+    /* Zorgt ervoor dat de kaartjes/divs niet ineens ervoor komen te draaien. */
 	transform-style:preserve-3d;
   
-/*   transform: rotate(-30deg); */
+    /* transform: rotate(-45deg); */
 }
 
 
-li {
-  /*  Je plaatst alles in dezelfde grid, dus op elkaar.  */
+section:nth-of-type(2) li {
+    /*  Je plaatst alles in dezelfde grid, dus op elkaar.  */
 	grid-area:1/1;
 	/*  Zowel op parent als op child grid (ul en li). Zo komt het achter elkaar te draaien.  */
 	display:grid;
 	
-  transform:
-			rotateY( 
-        calc(
-          1turn / sibling-count() * sibling-index()  
-          +
-          1turn / sibling-count() * var(--extra, 0)
-        ) 
-      )
-			translateZ( calc(var(--size) * 1.7) );
-  transition:.5s;
-/* 	animation: circle-animation var(--duration) linear infinite; */
-	
-  /*  sibling-count() bepaalt het aantal li's. Door geen getal tussen de haakjes te zetten past hij zichzelf aan aan de HTML. sibling-index() bepaalt de huidige element.  */
-/* 	animation-delay:calc( var(--duration) / sibling-count() * sibling-index() * -1 ); */
-	
-	transform-style:preserve-3d;
+    transform:
+		rotateY( 
+            calc(
+                1turn / sibling-count() * sibling-index()  
+                +
+                1turn / sibling-count() * var(--extra, 0)
+            ) 
+        )
+		translateZ(calc(var(--size) * 1.7));
+    transition: .5s;
+
+	transform-style: preserve-3d;
 }
 
-/* section:nth-of-type(1) li.selected {
-  transform: scale(1.2);
-} */
-
-div {
+section:nth-of-type(2) div {
 	grid-area:1/1;
 	
 	width:var(--size);
 	aspect-ratio:2/1;
 	
-/* 	background-image:linear-gradient(45deg, silver, whitesmoke); */
-  background-color: gainsboro;
+    /* 	background-image:linear-gradient(45deg, silver, whitesmoke); */
+    background-color: var(--color-jewellery-front);
 	border-radius: 10px;
   
-  /*  Hier zorg je ervoor dat aan de voorkant de voorkant te zien is en aan de achterkant de achterkant.  */
-	backface-visibility:hidden;
- 
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    /*  Hier zorg je ervoor dat aan de voorkant de voorkant te zien is en aan de achterkant de achterkant.  */
+	backface-visibility: hidden;
 	
 	&:nth-of-type(2) {
 		rotate:y .5turn;
-    background-color: dimgray;
+        background-color: var(--color-jewellery-back);
 	}
-  
-/*   &:hover {
-    transform: scale(1.2);
-  } */
 }
 
-section:nth-of-type(3) h2 {
-  grid-area: thema;
+section:nth-of-type(2) button {
+    appearance: none;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: 1s ease;
+
+    & > svg {
+    height: 2em;
+    }
+
+    & path {
+    fill: var(--color-background-one)
+    }
+
+    & circle {
+    fill: var(--color-background-three);
+    stroke: var(--color-background-three);
+    }
+
+    &:hover {
+    transform: scale(1.1);
+    }
 }
 
-section:nth-of-type(3) h3 {
-  grid-area: medestudenten;
-}
 
-section:nth-of-type(3) p:nth-of-type(1) {
-  grid-area: definitie;
-}
 
-section:nth-of-type(3) p:nth-of-type(2) {
-  grid-area: API;
-}
 
-section:nth-of-type(3) button {
-  appearance: none;
-  border-radius: 50%;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  
-  transition: 1s ease;
-  
-  &:nth-of-type(1) {
-    grid-area: button1;
-  }
-  
-  &:nth-of-type(2) {
-    grid-area: button2;
-  }
-  
-  & > svg {
-    height: 4em;
-  }
-  
-  & path {
-    fill: var(--color-text-one);
-  }
-  
-  & circle {
-    fill: var(--color-text-three);
-    stroke: var(--color-text-one);
-  }
-  
-  &:hover {
-    transform: scale(1.2);
-  }
-}
 
-.letter_m {
-  grid-area: svg;
-  align-items: center;
-  justify-self: center;
-  
-  fill: white;
-  height: 100%;
-  width: auto;
+
+
+/* ------------------- */
+/* MARK: BREDER SCHERM */
+/* ------------------- */
+@media screen and (min-width: 48em) {
+    main > section:nth-of-type(2) {
+        display: grid;
+        grid-template-areas:
+            "svg thema         thema"
+            "svg definitie     definitie"
+            "svg medestudenten medestudenten"
+            "svg API           API"
+            "svg animatie      animatie"
+            "svg button1       button2";
+    }
 }
