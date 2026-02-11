@@ -165,7 +165,7 @@ Ik hoop morgen alles samen te kunnen voegen en de API helemaal werkend te maken.
 
 
 
-**woensdag 12 feb**
+**woensdag 11 feb**
 
 Wat heb ik vandaag gedaan?
 
