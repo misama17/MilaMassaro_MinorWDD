@@ -49,17 +49,22 @@ async function insertCharacter(charm) {
     let characterInfo = await response.json();
 
     let valueCharm = characterInfo.data[charm]
-    document.querySelector("section:nth-of-type(2) p").textContent = valueCharm
 
+    document.querySelector("section:nth-of-type(2) p:nth-of-type(1)").textContent = valueCharm
+
+    return valueCharm
     // `<img src="${characterInfo.image}" alt="${characterInfo.name}">`
 }
 
+let avatarAPI = document.querySelector("img")
 
-
-async function getMinorMensen(charm) {
+async function getMinorMensen(charm, valueCharm) {
     let base = "https://fdnd.directus.app/items"
-    let endpoint = "/person?filter[fav_tag][_nempty]"
-    let url = base + endpoint
+    let endpoint = "/person?filter[squads][squad_id][tribe][name]=CMD%20Minor%20Web%20Dev&filter[squads][squad_id][cohort]=2526"
+    let charmFilter = `&filter[${charm}]=${valueCharm}`
+    let nempty = `&filter[avatar][_nempty]`
+    let nMila = `&filter[id][_neq]=311`
+    let url = base + endpoint + charmFilter + nempty + nMila
 
     let response = await fetch(url)
 
@@ -67,20 +72,24 @@ async function getMinorMensen(charm) {
 
     let deMinorMensen = responseJSON.data;
 
-    deMinorMensen.forEach(eenMinorMens => {
-        console.log(eenMinorMens)
+    console.log(deMinorMensen)
 
-        let deMinorMensenHTML = 
-        `<li>
-        <h2>${eenMinorMens.name}</h2>
-        <p>${eenMinorMens.fav_tag}</p>
-        <img src = "${eenMinorMens.avatar} alt="${eenMinorMens.name}">
-        </li>`
+    
+    let imageWrapper =  document.querySelector("section:nth-of-type(2) p:nth-of-type(2)")  
+
+    imageWrapper.innerHTML = "";
+
+    deMinorMensen.forEach(eenMinorMens => {
+
+
+        let eenMinorMensHTML =  `<img src = "${eenMinorMens.avatar} alt="${eenMinorMens.name}">`
+
+         
 
         // beforeend: hij voegt het voor het einde van de ul toe.
         // afterbegin: als eerste toegevoegd.
         // !!! Je mag nu de HTML weghalen, maar de ul moet blijven staan! dus je hebt een lege ul in je HTML.
-        deLijst.insertAdjacentHTML("beforeend", deMinorMensenHTML)
+        imageWrapper.insertAdjacentHTML("beforeend", eenMinorMensHTML)
     }
     ) 
 }
@@ -110,7 +119,7 @@ function toPrev() {
   getInfo(newExtra)
 }
 
-function getInfo(getal) {
+async function getInfo(getal) {
     let remainder = getal % 10
 
     let thema = document.querySelector("h2");
@@ -125,23 +134,24 @@ function getInfo(getal) {
 
     if  (nummer <= 6) {
         let charm = charms[nummer]
-
-        console.log("nummer:" + nummer)
         
         // h2
         let themaText = `<h2>${charm}</h2>`
         thema.innerHTML = themaText;
 
-        insertCharacter(charm);
+        let valueCharm = await insertCharacter(charm);
 
         // h3
         let medestudentenText = `<h3>Mensen met zelfde ${charm}:</h3>`
         medestudenten.innerHTML = medestudentenText;
+
+        // lijstje
+        getMinorMensen(charm, valueCharm)
     } 
     else {
         let ldNummer = nummer - 7
 
-        console.log("leerdoel nummer:" + ldNummer)
+        // console.log("leerdoel nummer:" + ldNummer)
         // leerdoelen
         let leerdoel = leerdoelen[ldNummer];
         let leerdoelTekst = leerdoelenTekst[ldNummer];

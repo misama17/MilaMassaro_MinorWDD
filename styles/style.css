@@ -20,11 +20,10 @@ html, body {
 
 
 /* ---------- COLORS ----------*/
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         --color-text-one:#fe5035;
         --color-text-two: #020202;
-        --color-text-three: #ffffff;
         --color-background-one: #efe7d6;
         --color-background-two: #fe5035;
         --color-background-three: #1e1e1e;
@@ -44,22 +43,48 @@ html, body {
 @media (prefers-color-scheme: dark) {
     :root {
         --color-text-one:#fe5035;
-        --color-text-two: #020202;
-        --color-text-three: #ffffff;
-        --color-background-one: #efe7d6;
+        --color-text-two: #efe7d6;
+        --color-background-one: #1e1e1e;
         --color-background-two: #fe5035;
-        --color-background-three: #1e1e1e;
         --color-skin: #fdb998;
         --color-hair: #633d23;
         --color-eyeball: #fff;
         --color-pupil: #472003;
         --color-lash: #281b0d;
         --color-eyebrow: #442f23;
-        --color-grey-clothes: #1e1e1e;
-        --color-darkgrey-clothes: #020202;
+        --color-grey-clothes: #efe7d6;
+        --color-darkgrey-clothes: #fff;
         --color-jewellery-front: #fcd638;
         --color-jewellery-back: #ba9600;
     }
+} */
+
+:root {
+	color-scheme:light dark;
+	
+	--bg:light-dark(#ffe, #036);
+    --color-text-one:light-dark(#fe5035, #fe5035);
+    --color-text-two:light-dark(#020202,#efe7d6);
+    --color-background-one:light-dark(#efe7d6,#1e1e1e);
+    --color-background-two:light-dark(#1e1e1e,#efe7d6);
+    --color-skin:light-dark(#fdb998,#fdb998);
+    --color-hair:light-dark(#633d23,#633d23);
+    --color-eyeball:light-dark(#fff,#fff);
+    --color-pupil:light-dark(#472003,#472003);
+    --color-lash:light-dark(#281b0d,#281b0d);
+    --color-eyebrow:light-dark(#442f23,#442f23);
+    --color-grey-clothes:light-dark(#1e1e1e,#efe7d6);
+    --color-darkgrey-clothes:light-dark(#020202,#fff);
+    --color-jewellery-front:light-dark(#fcd638,#fcd638);
+    --color-jewellery-back:light-dark(#ba9600,#ba9600);
+}
+
+:root:has([value='light']:checked){
+	color-scheme:light;
+}
+
+:root:has([value='dark']:checked){
+	color-scheme:dark;
 }
 
 
@@ -417,8 +442,8 @@ section:nth-of-type(2) button {
     }
 
     & circle {
-    fill: var(--color-background-three);
-    stroke: var(--color-background-three);
+    fill: var(--color-background-two);
+    stroke: var(--color-background-two);
     }
 
     &:hover {
@@ -426,7 +451,17 @@ section:nth-of-type(2) button {
     }
 }
 
-
+section:nth-of-type(2) p:nth-of-type(2) {
+    display: flex;
+    gap:.2em;
+    
+    img {
+        width:2em;
+        aspect-ratio:1;
+        object-fit: cover;
+        border-radius:50%;
+    }
+}
 
 
 
