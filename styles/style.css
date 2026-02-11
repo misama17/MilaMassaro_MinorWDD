@@ -20,24 +20,48 @@ html, body {
 
 
 /* ---------- COLORS ----------*/
-:root {
-    --color-text-one:#fe5035;
-    --color-text-two: #020202;
-    --color-text-three: #ffffff;
-    --color-background-one: #efe7d6;
-    --color-background-two: #fe5035;
-    --color-background-three: #1e1e1e;
-    --color-skin: #fdb998;
-    --color-hair: #633d23;
-    --color-eyeball: #fff;
-    --color-pupil: #472003;
-    --color-lash: #281b0d;
-    --color-eyebrow: #442f23;
-    --color-grey-clothes: #1e1e1e;
-    --color-darkgrey-clothes: #020202;
-    --color-jewellery-front: #fcd638;
-    --color-jewellery-back: #ba9600;
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-text-one:#fe5035;
+        --color-text-two: #020202;
+        --color-text-three: #ffffff;
+        --color-background-one: #efe7d6;
+        --color-background-two: #fe5035;
+        --color-background-three: #1e1e1e;
+        --color-skin: #fdb998;
+        --color-hair: #633d23;
+        --color-eyeball: #fff;
+        --color-pupil: #472003;
+        --color-lash: #281b0d;
+        --color-eyebrow: #442f23;
+        --color-grey-clothes: #1e1e1e;
+        --color-darkgrey-clothes: #020202;
+        --color-jewellery-front: #fcd638;
+        --color-jewellery-back: #ba9600;
+    }
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text-one:#fe5035;
+        --color-text-two: #020202;
+        --color-text-three: #ffffff;
+        --color-background-one: #efe7d6;
+        --color-background-two: #fe5035;
+        --color-background-three: #1e1e1e;
+        --color-skin: #fdb998;
+        --color-hair: #633d23;
+        --color-eyeball: #fff;
+        --color-pupil: #472003;
+        --color-lash: #281b0d;
+        --color-eyebrow: #442f23;
+        --color-grey-clothes: #1e1e1e;
+        --color-darkgrey-clothes: #020202;
+        --color-jewellery-front: #fcd638;
+        --color-jewellery-back: #ba9600;
+    }
+}
+
 
 
 /* ---------------- */
@@ -312,7 +336,7 @@ section:nth-of-type(2) {
 
 section:nth-of-type(2) ul {
 	--duration:90s;
-	--size:min(40vw, 12em);
+	--size:min(40vw, 12rem);
     --extra:0;
   
     padding: 0;
@@ -321,7 +345,7 @@ section:nth-of-type(2) ul {
 	
 	display: grid;
 	
-	perspective:50em;
+	perspective:200em;
   
     /* Zorgt ervoor dat de kaartjes/divs niet ineens ervoor komen te draaien. */
 	transform-style:preserve-3d;
