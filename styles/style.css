@@ -339,12 +339,12 @@ section:nth-of-type(2) li {
     transform:
 		rotateY( 
             calc(
-                1turn / sibling-count() * sibling-index()  
+                1turn / sibling-count() * (sibling-index() ) 
                 +
                 1turn / sibling-count() * var(--extra, 0)
             ) 
         )
-		translateZ(calc(var(--size) * 1.7));
+		translateZ(calc(var(--size) * 1.6));
     transition: .5s;
 
 	transform-style: preserve-3d;
@@ -363,8 +363,14 @@ section:nth-of-type(2) div {
     /*  Hier zorg je ervoor dat aan de voorkant de voorkant te zien is en aan de achterkant de achterkant.  */
 	backface-visibility: hidden;
 	
+    &:nth-of-type(1) {
+        font-size: calc(var(--size) * .5);
+        text-align: center;
+        /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 1); */
+    }
+
 	&:nth-of-type(2) {
-		rotate:y .5turn;
+		rotate: y .5turn;
         background-color: var(--color-jewellery-back);
 	}
 }
