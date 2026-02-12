@@ -217,7 +217,7 @@ Komende week hoop ik me iets minder onzeker te voelen over mijn kennis en vooral
 
 
 
-##BRONNENLIJST
+**BRONNENLIJST**
 https://svgo.dev/docs/introduction/
 https://jakearchibald.github.io/svgomg/
 https://css-tricks.com/animating-svg-css/
