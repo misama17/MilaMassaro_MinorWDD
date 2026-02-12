@@ -100,6 +100,14 @@ Ik ga zorgen dat er 2 of 3 animaties van mijn SVG het doen voor de presentatie.
 Eerste versie presenteren.
 
 
+**WEEK 1: REFLECTIE**
+Ik had best wel wat opstart problemen. Ik heb net een minor gedaan die heel creatief was en heel visueel gericht. Ik was bij deze minor veel meer bezig met vormgeving en "the visual track". Ja, ik ben wel studentassistent geweest in het eerste semester, maar echt zelf coderen had ik toch al wel 1,5 jaar niet gedaan. Dus ik realiseer me dat het logisch is dat ik even in moet komen, maar tegelijkertijd vind ik het ook lastig. Ik wil al snel 100km/uur gaan, waardoor ik merk dat ik juist meer moeite heb dan wanneer ik stap voor stap probeer te kijken. Deze week was dan ook best een groot deel vormgeving en illustreren op Adobe Illustrator. Dus de overgang van de ene naar de andere minor loopt nog beetje moeizaam.
+Ook merk ik dat ik het moeilijk vind om te weten hoe ik iets op moet lossen, als het niet lukt. Dit komt doordat ik niet goed weet welke opties er met deze talen zijn. Hier wil ik dan ook graag beter in worden door te proberen en oefenen en uren te maken.
+
+Ik vond het heel erg leuk om echt het stuk vormgeven waar ik goed in ben te combineren met coderen. Ook de workshops over scroll-driven animations en view-transitions vond ik super interessant. Ik neig al lang naar meer doen met animeren, maar had me nooit helemaal gerealiseerd dat dat ook op deze manier met CSS (en Javascript) kon op websites. Ik dacht meer aan Adobe After Effects of animatie tekenen. Maar dit opent wel wat deuren voor mijn gevoel. Het heeft me altijd geinteresseerd om meer te denken in "beweging". 
+
+
+
 WEEK 2
 
 **maandag 09 feb**
@@ -196,3 +204,23 @@ Wat ga ik morgen doen?
 Presentatie en marktje en reflectieformulier.
 Slapen in de avond ;)
 
+
+
+**WEEK 2: REFLECTIE**
+Een hele zware week voor mij eerlijk gezegd. Ik had veel moeite met op gang komen en daarbij ook veel moeite met de uren die we maken. Ik heb buiten studie ook een aardig druk leven... dus ik merk aan mezelf dat dagen van half 10 tot 5 elke dag me zwaar valt. Na studie heb ik namelijk altijd of voetbal of werk, waardoor ik eigenlijk nooit rust krijg. Ook vind ik het lastig om me te concentreren in het lokaal. Ik raak snel afgeleid en werk over het algemeen prettiger thuis. Dus dit is iets waar ik eventjes aan moet wennen.
+
+Wat betreft coderen heb ik veel aan Sanne gevraagd. Gelukkig was hij altijd aardig en wilde hij me graag helpen. En alle uitleg vond ik te volgen. Moet alleen wel het stapje zetten naar zelf bedenken... Maar daarvoor ben ik bij deze minor. Soms had ik wel het gevoel alsof ik achterliep t.o.v. de rest, maar ik moet mezelf ook niet vergelijken. Van tevoren wist ik dat ik een stukje JavaScript in te halen had. Ik voelde de druk en stress wel deze week.
+
+Wat betreft coderen heb ik echt ontzettend veel geleerd deze week. Veel nieuwe dingen als API gebruiken, maar ook weer opfrissen van oude kennis en me daar dan weer verder in verdiepen. Ik vind de uitleg van docenten goed te volgen en ik merk dat me dit echt verder helpt. Veel aantekeningen maken, maar vooral mee typen helpt merk ik. Zeker zodat ik dat op een later moment weer erbij kan pakken. 
+
+Komende week hoop ik me iets minder onzeker te voelen over mijn kennis en vooral uren te maken om de talen te leren. Maar dat komt denk ik wel goed bij deze minor.
+
+
+
+##BRONNENLIJST
+https://svgo.dev/docs/introduction/
+https://jakearchibald.github.io/svgomg/
+https://css-tricks.com/animating-svg-css/
+https://css-tricks.com/tools-for-optimizing-svg/
+https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/
+https://www.a11yproject.com/posts/how-to-hide-content/
