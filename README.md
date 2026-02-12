@@ -218,9 +218,9 @@ Komende week hoop ik me iets minder onzeker te voelen over mijn kennis en vooral
 
 
 **BRONNENLIJST**
-https://svgo.dev/docs/introduction/
-https://jakearchibald.github.io/svgomg/
-https://css-tricks.com/animating-svg-css/
-https://css-tricks.com/tools-for-optimizing-svg/
-https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/
-https://www.a11yproject.com/posts/how-to-hide-content/
+- https://svgo.dev/docs/introduction/
+- https://jakearchibald.github.io/svgomg/
+- https://css-tricks.com/animating-svg-css/
+- https://css-tricks.com/tools-for-optimizing-svg/
+- https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/
+- https://www.a11yproject.com/posts/how-to-hide-content/
