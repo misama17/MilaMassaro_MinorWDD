@@ -87,6 +87,7 @@ form {
         padding: .75em;
     }
 
+    /* !! ChatGPT gevraagd hoe ik de kleur van de radiobutton aan kon passen */
     & input[type="radio"] {
         accent-color: var(--color-text-one);
     }
@@ -308,10 +309,13 @@ section:nth-of-type(2) ul {
   
     padding: 0;
     margin: 0;
+
+    /* Met behulp van de docent (Sanne) */
     list-style-type: '';
 	
 	display: grid;
-	
+
+	/* Met behulp van de docent (Sanne) */
 	perspective:200em;
   
     /* Zorgt ervoor dat de kaartjes/divs niet ineens ervoor komen te draaien. */
@@ -336,7 +340,6 @@ section:nth-of-type(2) li {
         )
 		translateZ(calc(var(--size) * 1.6));
     transition: .5s;
-
 	transform-style: preserve-3d;
 }
 

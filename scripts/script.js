@@ -40,7 +40,7 @@ let leerdoelenTekst = [
 let avatarAPI = document.querySelector("img")
 
 
-
+// Sanne heeft me geholpen met de tekst uit API erin te zetten!
 
 
 // ************************************
