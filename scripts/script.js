@@ -37,7 +37,15 @@ let leerdoelenTekst = [
     "Ik ga ontdekken of webdesign & development mijn toekomstige vakgebied kan zijn."
 ]
 
+let avatarAPI = document.querySelector("img")
 
+
+
+
+
+// ************************************
+// -------- */ MARK: FUNCTIONS --------
+// ************************************
 // ------------- API: 311 -------------
 async function insertCharacter(charm) {
     let base = "https://fdnd.directus.app/items"
@@ -55,8 +63,7 @@ async function insertCharacter(charm) {
     return valueCharm
 }
 
-let avatarAPI = document.querySelector("img")
-
+// ------------- API: MINOR MENSEN -------------
 async function getMinorMensen(charm, valueCharm) {
     let base = "https://fdnd.directus.app/items"
     let endpoint = "/person?filter[squads][squad_id][tribe][name]=CMD%20Minor%20Web%20Dev&filter[squads][squad_id][cohort]=2526"
@@ -90,13 +97,6 @@ async function getMinorMensen(charm, valueCharm) {
 }
 
 
-
-
-
-// ************************************
-// -------- */ MARK: FUNCTIONS --------
-// ************************************
-
 // ---------- 3D CAROUSEL ----------
 function toNext() {
   let curExtra = getComputedStyle(carouselContainer).getPropertyValue("--extra");
@@ -114,6 +114,8 @@ function toPrev() {
   getInfo(newExtra)
 }
 
+
+// ---------- INFORMATION ----------
 async function getInfo(getal) {
     let remainder = getal % 10
 
