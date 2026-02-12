@@ -22,7 +22,7 @@ let charms = [
     "fav_season",
     "shoe_size",
     "residency",
-    "fav_movie"
+    "fav_property"
 ]
 
 let leerdoelen = [
@@ -32,9 +32,9 @@ let leerdoelen = [
 ]
 
 let leerdoelenTekst = [
-    "Ik kan gebruikerservaring vertalen naar bewuste keuzes in HTML-structuur, interactie en visuele hiërarchie, zodat de interface intuïtief aanvoelt zonder uitleg.",
-    "Ik wil ontdekken of front-end development mijn toekomstige vakgebied zou kunnen zijn, door ervaring op te doen met HTML, CSS en JavaScript, en te reflecteren op mijn eigen interesse, motivatie en voldoening bij het werken aan websites.",
-    "Ik ga experimenteren met animaties met CSS (en JavaScript) en ontdek zo hoe ik unieke, opvallende websites kan maken."
+    "Ik kan een website maken met een goede user experience.",
+    "Ik ga leren hoe ik animaties maak en kan inzetten voor unieke websites.",
+    "Ik ga ontdekken of webdesign & development mijn toekomstige vakgebied kan zijn."
 ]
 
 
@@ -53,7 +53,6 @@ async function insertCharacter(charm) {
     document.querySelector("section:nth-of-type(2) p:nth-of-type(1)").textContent = valueCharm
 
     return valueCharm
-    // `<img src="${characterInfo.image}" alt="${characterInfo.name}">`
 }
 
 let avatarAPI = document.querySelector("img")
@@ -71,11 +70,9 @@ async function getMinorMensen(charm, valueCharm) {
     let responseJSON = await response.json();
 
     let deMinorMensen = responseJSON.data;
-
-    console.log(deMinorMensen)
-
     
     let imageWrapper =  document.querySelector("section:nth-of-type(2) p:nth-of-type(2)")  
+
 
     imageWrapper.innerHTML = "";
 
@@ -83,8 +80,6 @@ async function getMinorMensen(charm, valueCharm) {
 
 
         let eenMinorMensHTML =  `<img src = "${eenMinorMens.avatar} alt="${eenMinorMens.name}">`
-
-         
 
         // beforeend: hij voegt het voor het einde van de ul toe.
         // afterbegin: als eerste toegevoegd.
@@ -167,6 +162,10 @@ async function getInfo(getal) {
         // definitie p
         let definitieText = `<p>${leerdoelTekst}</p>`
         definitie.innerHTML = definitieText;
+
+        // image wrapper
+        let imageWrapper =  document.querySelector("section:nth-of-type(2) p:nth-of-type(2)")  
+        imageWrapper.innerHTML = "";
 
         // Avatar
         let avatar = `<img></img>`

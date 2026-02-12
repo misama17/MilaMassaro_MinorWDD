@@ -20,51 +20,12 @@ html, body {
 
 
 /* ---------- COLORS ----------*/
-/* @media (prefers-color-scheme: light) {
-    :root {
-        --color-text-one:#fe5035;
-        --color-text-two: #020202;
-        --color-background-one: #efe7d6;
-        --color-background-two: #fe5035;
-        --color-background-three: #1e1e1e;
-        --color-skin: #fdb998;
-        --color-hair: #633d23;
-        --color-eyeball: #fff;
-        --color-pupil: #472003;
-        --color-lash: #281b0d;
-        --color-eyebrow: #442f23;
-        --color-grey-clothes: #1e1e1e;
-        --color-darkgrey-clothes: #020202;
-        --color-jewellery-front: #fcd638;
-        --color-jewellery-back: #ba9600;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-text-one:#fe5035;
-        --color-text-two: #efe7d6;
-        --color-background-one: #1e1e1e;
-        --color-background-two: #fe5035;
-        --color-skin: #fdb998;
-        --color-hair: #633d23;
-        --color-eyeball: #fff;
-        --color-pupil: #472003;
-        --color-lash: #281b0d;
-        --color-eyebrow: #442f23;
-        --color-grey-clothes: #efe7d6;
-        --color-darkgrey-clothes: #fff;
-        --color-jewellery-front: #fcd638;
-        --color-jewellery-back: #ba9600;
-    }
-} */
-
 :root {
 	color-scheme:light dark;
 	
-	--bg:light-dark(#ffe, #036);
     --color-text-one:light-dark(#fe5035, #fe5035);
     --color-text-two:light-dark(#020202,#efe7d6);
+    --color-text-three:light-dark(#efe7d6,#020202);
     --color-background-one:light-dark(#efe7d6,#1e1e1e);
     --color-background-two:light-dark(#1e1e1e,#efe7d6);
     --color-skin:light-dark(#fdb998,#fdb998);
@@ -73,10 +34,13 @@ html, body {
     --color-pupil:light-dark(#472003,#472003);
     --color-lash:light-dark(#281b0d,#281b0d);
     --color-eyebrow:light-dark(#442f23,#442f23);
-    --color-grey-clothes:light-dark(#1e1e1e,#efe7d6);
-    --color-darkgrey-clothes:light-dark(#020202,#fff);
+    --color-clothes:light-dark(#1e1e1e,#efe7d6);
+    --color-clothes-two:light-dark(#020202,#fff);
     --color-jewellery-front:light-dark(#fcd638,#fcd638);
     --color-jewellery-back:light-dark(#ba9600,#ba9600);
+    --color-flower:light-dark(#fe5035,#fff);
+    --color-middle:light-dark(#fcd638,#fcd638);
+    --color-stam:light-dark(#30893b,#30893b);
 }
 
 :root:has([value='light']:checked){
@@ -104,6 +68,28 @@ html, body {
 /* -------------- */
 body {
     background-color: var(--color-background-one);
+}
+
+form {
+    position: fixed;
+    z-index: 2;
+    background-color: var(--color-background-two);
+    color: var(--color-text-three);
+    padding: .5em .2em;
+    right: 0;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: .75em 0 0 .75em;
+
+    & label {
+        padding: .75em;
+    }
+
+    & input[type="radio"] {
+        accent-color: var(--color-text-one);
+    }
 }
 
 
@@ -136,15 +122,15 @@ main > section:nth-of-type(1) div svg {
 
 
 /* --------------- */
-/* MARK: Mila info */
+/* /* MARK: Mila info */
 /* --------------- */
 main > section:nth-of-type(2) {
     height: 100vh;
 }
 
 section:nth-of-type(2) > svg {
-    width: 60%;
-    max-width: 25em;
+    width: 90%;
+    max-width: 30em;
     height: auto;
 }
 
@@ -197,13 +183,13 @@ section:nth-of-type(2) > svg {
 .onderlichaam,
 .arm_rechts,
 .arm_links {
-    fill: var(--color-grey-clothes);
+    fill: var(--color-clothes);
 }
 
 /* <---- KLEDING EN DETAILS ----> */
 .zak,
 .lichaam {
-    fill: var(--color-darkgrey-clothes);
+    fill: var(--color-clothes-two);
 }
 
 .ketting,
@@ -228,9 +214,21 @@ section:nth-of-type(2) > svg {
   transform-origin: 50% 0;
   
   animation-timeline: view(); 
-  animation-timing-function: cover;
+  animation-timing-function: contain;
   animation-name: rotate-animation-ketting;
   animation-fill-mode: both;
+}
+
+.stam {
+    fill: var(--color-stam);
+}
+
+.bloemblaadje {
+    fill: var(--color-flower);
+}
+
+.bloemmidden {
+    fill: var(--color-middle);
 }
 
 
@@ -305,10 +303,9 @@ main > section:nth-of-type(2) {
     "API           API"
     "animatie      animatie"
     "button1       button2";
-    row-gap: 2em;
-    grid-auto-rows: max-content;
+    row-gap: .5em;
 
-    margin: 1em 0 4em 0;
+    margin: 4em 1em 2em 1em;
 
     & ul {
         grid-area: animatie;
@@ -349,7 +346,7 @@ main > section:nth-of-type(2) {
 
 
 section:nth-of-type(2) {
-	margin: 10em 0 0 0;
+	margin: 5em 0 0 0;
     row-gap: 0;
 	
     /* dynamic view height: houdt rekening met de balkjes op een iPhone   */
@@ -357,6 +354,10 @@ section:nth-of-type(2) {
 	
 	display:grid;
 	place-items:center;
+
+    p {
+        text-align: center;
+    }
 }
 
 section:nth-of-type(2) ul {
@@ -434,7 +435,7 @@ section:nth-of-type(2) button {
     transition: 1s ease;
 
     & > svg {
-    height: 2em;
+    height: 3em;
     }
 
     & path {
@@ -456,10 +457,11 @@ section:nth-of-type(2) p:nth-of-type(2) {
     gap:.2em;
     
     img {
-        width:2em;
-        aspect-ratio:1;
+        width: 2em;
+        aspect-ratio: 1;
         object-fit: cover;
-        border-radius:50%;
+        border-radius: 50%;
+        border: .1em solid var(--color-text-two);
     }
 }
 
@@ -470,7 +472,7 @@ section:nth-of-type(2) p:nth-of-type(2) {
 /* ------------------- */
 /* MARK: BREDER SCHERM */
 /* ------------------- */
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 65em) {
     main > section:nth-of-type(2) {
         display: grid;
         grid-template-areas:
@@ -480,5 +482,30 @@ section:nth-of-type(2) p:nth-of-type(2) {
             "svg API           API"
             "svg animatie      animatie"
             "svg button1       button2";
+        
+        row-gap: .5em;
+        grid-template-columns: 40% 1fr 1fr;
+
+        margin: 0 1em;
+
+        & h2 {
+            margin: 3em 0 0 0;
+        }
+
+        & button {
+            margin: 0 0 10em 0;
+        }
+    }
+
+    main > section:nth-of-type(1) div svg {
+        fill: var(--color-text-one);
+        width: 40vw;
+    }
+
+    section:nth-of-type(2) > svg {
+        width: 70%;
+        min-width: 30em;
+        max-width: 80em;
+        height: auto;
     }
 }
